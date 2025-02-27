@@ -1,3 +1,4 @@
+
 #Día 3 de python
 #Puntos del 1 al 3
 age=18
@@ -17,7 +18,7 @@ a=input("Ingrese el valor del lado a del triángulo: ")
 a1=int(a)
 b=input("Ingrese el valor del lado b del triángulo: ")
 b1=int(b)
-c=input("Ingrese el lado c del triángulo: ")
+c=input("Ingrese el valor del lado c del triángulo: ")
 c1=int(c)
 perimetro= a1 + b1 +c1
 print("El perímetro del triángulo es: ", perimetro)
@@ -41,10 +42,9 @@ circumference= radio * 2 * 3.14
 print("La circunferencia del círculo es: ", circumference)
 
 #Punto 8
-xint=int(input("Escribe la intercepción en X: "))
-yint=(xint*2)-2
-print("La intercepción en Y es:", yint)
-print("Y la pendiente es: ",2)
+x1,y1=0,-2
+x2,y2=1,0
+print("La pendiente de y=2x-2  es de: ", (y2-y1)/(x2-x1))
 
 #Punto 9
 x1, x2, y1, y2 = 2, 6, 2, 10
@@ -55,10 +55,13 @@ print((y2 - y1) / (x2 - x1))
 
 #Punto 10
 print(2 if 2 < (y2 - y1) / (x2 - x1) else (y2 - y1) / (x2 - x1))
+
 #Punto 11
 for x in range(-5, 5):
-    print((x ** 2) + (6 * x) + 9)
-print( -3, "is where y is 0")
+    y=(x ** 2) + (6 * x) + 9
+    print("Cuando X vale: ", x, ", Y equivale a: ", y)
+    if (y==0):
+        print( x, "es donde Y equivale a 0")
 
 #Punto 12
 print(not len("python") == len("dragon"))
@@ -87,7 +90,7 @@ print(7//3 == value)
 print(type("10") == type(10))
 
 #Punto 20
-print(int(9.8) == 10) #Si ponemos el 9.8 como string marca error, puesto que no es unn valor con base 10
+print(int(float('9.8')) == 10) 
 
 #Punto 21
 hours=int(input("Ingresa las horas: "))
